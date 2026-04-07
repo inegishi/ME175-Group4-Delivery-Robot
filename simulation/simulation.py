@@ -60,8 +60,8 @@ class Robot:
         # --- tuning knobs ---
         LOOKAHEAD_PX = 50          # bigger = smoother / wider turns
         WP_SWITCH_PX = 40         # distance needed to advance waypoint
-        MAX_TURN_RATE = 0.03       # rad per frame-ish (controls steering smoothness)
-        ANGLE_SLOWDOWN = 2       # higher = slow down more on sharp turns
+        MAX_TURN_RATE = 0.03       # rad per frame- (controls steering smoothness)
+        ANGLE_SLOWDOWN = 4       # higher = slow down more on sharp turns
 
         tx, ty = self.path[self.target_index]
         distance = math.hypot(tx - self.x, ty - self.y)
@@ -206,8 +206,8 @@ for u, v in G.edges():
     G[u][v]['weight'] = dist
     
 #define start/goal node
-start =1 
-goal = 11
+start = 11 
+goal = 1
 path = nx.dijkstra_path(G, start, goal)
 path_edges = list(zip(path, path[1:]))
 
