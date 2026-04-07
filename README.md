@@ -22,3 +22,9 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+### 4. to run simulation
+```bash
+cd simulation
+simulation.py
+```
