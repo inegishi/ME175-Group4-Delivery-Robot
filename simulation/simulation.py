@@ -206,8 +206,8 @@ for u, v in G.edges():
     G[u][v]['weight'] = dist
     
 #define start/goal node
-start = 11 
-goal = 1
+start = 1 
+goal = 11
 path = nx.dijkstra_path(G, start, goal)
 path_edges = list(zip(path, path[1:]))
 
